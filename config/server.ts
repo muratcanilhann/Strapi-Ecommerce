@@ -1,26 +1,31 @@
-export default ({ env }) => ({
-  host: env('HOST', '0.0.0.0'), 
-  port: env.int('PORT', 1337), 
+export default () => ({
+  host: '0.0.0.0', 
+  port: 1337, 
   app: {
-    keys: env.array('APP_KEYS'), 
+    keys: [
+      'hg6oI/XBm86SzyP4cE8O3g==',
+      'll1OxUQTwx5jA4SsCbXtkg==',
+      'mmX6cHf/9bBumHgCT86C7w==',
+      'Y/vL7hohOlWCgB1Zh2nGiw==',
+    ],
   },
   admin: {
     auth: {
-      secret: env('ADMIN_JWT_SECRET'), 
+      secret: 'nEsChj5GTkDrFbw0eQrcvQ==', 
     },
   },
   database: {
-    client: env('DATABASE_CLIENT', 'sqlite'), 
+    client: 'sqlite', 
     connection: {
-      filename: env('DATABASE_FILENAME', '.tmp/data.db'), 
+      filename: '.tmp/data.db',
     },
     useNullAsDefault: true, 
   },
   security: {
-    apiTokenSalt: env('API_TOKEN_SALT'), 
-    transferTokenSalt: env('TRANSFER_TOKEN_SALT'), 
+    apiTokenSalt: 'cgHQGFOaTqanLUo6JxJ9Xw==', 
+    transferTokenSalt: 'mHoKBtQxXSNIfffgnDFoSQ==',
   },
   jwt: {
-    secret: env('JWT_SECRET'), 
+    secret: 'HULH9+DsOm+EROA+JXmmow==', 
   },
 });
